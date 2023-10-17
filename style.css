@@ -311,10 +311,20 @@ a {
 
 /*Gallery*/
 
+#about-gallery{
+    text-align: center;
+}
+
+#about-gallery h2{
+    font-size: 3em;
+    margin-bottom: 2em;
+}
+
 .gallery{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 10px;
+    column-gap: 3em;
+    row-gap: 5em;
     margin-left: 3em;
 }
 
@@ -377,4 +387,108 @@ a {
 
 .closeBtn:hover{
     color: rgb(255, 255, 255);
+}
+
+/*Breed*/
+
+#breed-top{
+    display: flex;
+    width: 100%;
+    margin-top: 12vh;
+}
+
+.breed-top-img{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+.breed-top-img img{
+    object-fit: cover;
+    border-radius: 50%;
+    width: 50em;
+    height: 50em;
+}
+
+.breed-top-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.breed-name{
+    font-size: 7em;
+    margin-bottom: .5em;
+}
+
+.breed-basic-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3em;
+    line-height: 2em;
+}
+
+#breed-info{
+    margin-bottom: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.breed-info-list{
+    column-count: 3;
+    column-gap: 5em;
+}
+
+.breed-info-list-item{
+    display: flex;
+    break-inside: avoid;
+}
+
+.breed-info-list-item div img{
+    width: 4em;
+    margin-right: 1.5em;
+}
+
+.breed-info-list-item div span{
+    font-size: 2em;
+    line-height: 2em;
+}
+
+.breed-info-list-item div p{
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+#dogs{
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+#dogs h2{
+    font-size:3em;
+    margin-bottom: 2em;
+}
+
+.dog-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    row-gap: 5em;
+    width: 100%;
+    margin-bottom: 5em;
+}
+.dog a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dog img{
+    width: 40em;
+}
+
+.dog span{
+    font-size: 2.5em;
 }
