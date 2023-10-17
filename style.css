@@ -337,6 +337,7 @@ a {
 .gallery-item img{
     width: 40em;
     height: 30em;
+    border-radius: 15px;
     object-fit: cover;
     transition: .3s ease-in-out;
 }
@@ -405,7 +406,7 @@ a {
 
 .breed-top-img img{
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 15px;
     width: 50em;
     height: 50em;
 }
@@ -487,8 +488,54 @@ a {
 
 .dog img{
     width: 40em;
+    border-radius: 15px;
 }
 
 .dog span{
     font-size: 2.5em;
+}
+
+/*About dog*/
+
+#about-dog{
+    margin-top: 12vh;
+    margin-bottom: 3em;
+}
+
+.about-dog{
+    display: flex;
+    width: 100%;
+}
+
+.about-dog-img{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.about-dog-img img{
+    border-radius: 15px;
+}
+
+.about-dog-text{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.dog-name{
+    font-size: 70px;
+    margin-bottom: .5em;
+}
+
+.by-judges-title{
+    font-size: 50px;
+    margin-bottom: .5em;
+}
+
+.by-judges{
+    font-size: 35px;
+    line-height: 1.5em;
 }
