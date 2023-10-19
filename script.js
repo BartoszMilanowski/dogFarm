@@ -1,7 +1,7 @@
 window.onscroll = function () { scrollFunction() };
 document.addEventListener('DOMContentLoaded', (e) => {
     modalGallery();
-    slideShow();
+    showSlides();
 })
 
 
@@ -45,29 +45,20 @@ const modalGallery = () => {
     };
 }
 
-const slideShow = () => {
+
+let slideIndex = 0;
+
+const showSlides = () => {
+
+    let i;
     const slides = document.querySelectorAll('.slide');
 
-    let slideIndex = 0;
+    for(i = 0; i < slides.length; i++){
+        slides[i].style.display = 'none';
+    };
+    slideIndex++;
+    if(slideIndex > slides.length){slideIndex=1};
+    slides[slideIndex-1].style.display = 'block';
+    setTimeout(showSlides,4000);
 
-    setInterval(() => {   
-        if(slideIndex === slides.length-1){
-            slideIndex = 0;
-        } else{
-            slideIndex++
-        };
-        changeSlide();
-    }, 2000);
-
-
-    const changeSlide = () => {
-        slides.forEach((slide) => {
-            if (slideIndex === slides.indexOf(slide)) {
-                slide.style.display = 'block';
-            } else {
-                slide.style.display = 'none';
-            }
-        });
-    }
- 
 }
