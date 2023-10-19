@@ -1,7 +1,13 @@
-window.onscroll = function () { scrollFunction() };
-document.addEventListener('DOMContentLoaded', (e) => {
+window.onscroll = () => {
+    if(window.innerWidth > 1400){
+        scrollFunction();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
     modalGallery();
     showSlides();
+    toggleMenu();
 })
 
 
@@ -25,7 +31,6 @@ const modalGallery = () => {
 
     let imgModal = (img) => {
 
-        console.log(img);
         let src = img.src;
 
         const modal = document.createElement('div');
@@ -53,12 +58,31 @@ const showSlides = () => {
     let i;
     const slides = document.querySelectorAll('.slide');
 
-    for(i = 0; i < slides.length; i++){
+    if(slides.length === 0){
+        return;
+    }
+
+    for (i = 0; i < slides.length; i++) {
         slides[i].style.display = 'none';
     };
     slideIndex++;
-    if(slideIndex > slides.length){slideIndex=1};
-    slides[slideIndex-1].style.display = 'block';
-    setTimeout(showSlides,4000);
+    if (slideIndex > slides.length) { slideIndex = 1 };
+    slides[slideIndex - 1].style.display = 'block';
+    setTimeout(showSlides, 5000);
+}
+
+const toggleMenu = () => {
+    const closeBtn = document.querySelector('.close-menu');
+    const openBtn = document.querySelector('.burger-icon');
+    const menu = document.querySelector('.menu-list');
+
+    openBtn.onclick = () => {
+        menu.style.display = 'flex';
+    }
+
+    closeBtn.onclick = () => {
+        menu.style.display = 'none';
+    }
+
 
 }

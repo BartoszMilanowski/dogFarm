@@ -81,7 +81,16 @@ a {
     width: 100%;
 }
 
-.sidebar {
+
+.burger-icon{
+    display: none;
+}
+
+.close-menu{
+    display: none;
+}
+
+.home-icon{
     display: none;
 }
 
@@ -141,7 +150,7 @@ a {
 
 .motto-img {
     width: 100%;
-    height: 100%;
+    height: 600px;
     border-radius: 15px;
 }
 
@@ -160,7 +169,7 @@ a {
 
 .about-section-image img {
     width: 100%;
-    height: 100%;
+    height: 600px;
     border-radius: 15px;
 }
 
@@ -515,4 +524,273 @@ a {
 .by-judges {
     font-size: 35px;
     line-height: 1.5em;
+}
+
+/*Media queries*/
+
+@media only screen and (max-width: 1400px){
+
+    /*Navbar*/
+
+    .navbar{
+        background: transparent;
+    }
+
+    /* .navbar-logo{
+        display: none;
+    } */
+
+    .menu-list{
+        display: none;
+        position: fixed;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        align-items:flex-end;
+        justify-content: flex-start;
+        line-height: 5em;
+        height: 100vh;
+        width: 25vw;
+        padding-top: 8em;
+        padding-right: 5em;
+        background-color: rgba(244, 246, 247, 1);
+        z-index: 1;
+    }
+
+    .burger-icon{
+        display: flex;
+        position: fixed;
+        right: 3%;
+        top: 5;
+        font-size: 5em;
+        height: .9em;
+        cursor: pointer;
+        filter: drop-shadow(5px 5px 3px #666666);
+    }
+
+    .close-menu{
+        display: block;
+        height: 3em;
+        transform: translateY(-115%) translateX(-10%);
+        cursor: pointer;
+    }
+
+    .home-icon{
+        display: block;
+        font-size: 5em;
+        height: .9em;
+        margin-bottom: .5em;
+    }
+
+    /*Main page*/
+
+    .motto-area{
+        margin-top: 2.5em;
+        font-size: .8em;
+    }
+
+    .motto-img{
+        height: 450px;
+    }
+
+    .about-section{
+        margin-top: 2.5em;
+        font-size: .8em;
+    }
+
+    .about-section-image img{
+        height: 450px;
+    }
+
+    #contact h2{
+        font-size: 4em;
+    }
+
+    .contact-data{
+        font-size: 2em;
+    }
+
+    .sm-icon{
+        height: 1.5em;
+    }
+
+}
+
+@media only screen and (max-width: 1200px){
+
+    /*Navbar*/
+
+    .menu-list{
+        width: 50vw;
+        align-items: flex-end;
+        padding-right: 1.5em;
+    }
+
+    .menu-link{
+        font-size: 3.5em;
+    }
+
+    /*Main page*/
+
+    #slideshow{
+        height: 50vh;
+    }
+
+    .slide{
+        height: 50vh;
+    }
+
+    .slide img{
+        height: 50vh;
+    }
+
+    .capture-text{
+        position: relative;
+        bottom: 65px;
+    }
+
+    .motto-area{
+        flex-direction: column;
+    }
+
+    .motto-text-area{
+        width: 100vw;
+        font-size: 4em;
+        padding-top: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 1em;
+    }
+
+    .motto-img-area{
+        width: 100vw;
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+    }
+
+    .about-section{
+        flex-direction: column-reverse;
+    }
+
+    .about-section-text{
+        width: 100vw;
+        font-size: 4em;
+        padding-top: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 1em;
+    }
+
+    .about-section-image{
+        width: 100vw;
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+    }
+
+    #contact h2{
+        font-size: 5em;
+    }
+
+    .contact-data{
+        flex-direction: column;
+        font-size: 4em;
+    }
+}
+
+@media only screen and (max-width: 600px){
+
+    /*Navbar*/
+
+
+    .navbar{
+        height: 10vh;
+        width: 100vw;
+        padding-top: 4em;
+        margin-bottom: 1em;
+    }
+
+    .navbar-logo{
+        display: block;
+        height: .83m;
+    }
+    
+    .menu-list{
+        width: 100%;
+        height: 100%;
+        align-items: flex-end;
+    }
+
+    .burger-icon{
+        position: absolute;
+        right: 5%;
+        top: 25%;
+        height: .8em;
+    }
+
+    /*Main page*/
+
+    #slideshow{
+        display: none;
+    }
+
+    .motto-area{
+        flex-direction: column-reverse;
+        margin-top: 10vh;
+    }
+
+    .motto-text-area{
+        width: 100vw;
+        font-size: 3em;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 1em;
+    }
+
+    .motto-img-area{
+        width: 100vw;
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+    }
+    .motto-img{
+        width: 100%;
+        height: 25em;
+    }
+
+    .about-section{
+        flex-direction: column;
+    }
+
+    .about-section-text{
+        width: 100vw;
+        font-size: 3em;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 1em;
+    }
+
+    .about-section-image{
+        width: 100vw;
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+    }
+
+    .about-section-image img{
+        width: 100%;
+        height: 25em;
+    }
+
+    #contact h2{
+        font-size: 3em;
+    }
+
+    .contact-data{
+        flex-direction: column;
+        font-size: 2em;
+    }
+
+    #footer{
+        font-size: 1em;
+    }
+
+
 }
