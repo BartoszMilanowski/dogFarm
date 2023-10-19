@@ -1,8 +1,4 @@
-window.onscroll = () => {
-    if(window.innerWidth > 1400){
-        scrollFunction();
-    }
-}
+window.onscroll = () => {scrollFunction();}
 
 document.addEventListener('DOMContentLoaded', () => {
     modalGallery();
