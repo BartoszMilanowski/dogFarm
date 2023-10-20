@@ -392,12 +392,13 @@ a {
 .breed-top-img img {
     object-fit: cover;
     border-radius: 15px;
-    width: 50em;
+    width: 90%;
     height: 50em;
 }
 
 .breed-top-text {
     display: flex;
+    width: 50%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -413,7 +414,11 @@ a {
     flex-direction: column;
     align-items: center;
     font-size: 3em;
-    line-height: 2em;
+    line-height: 1em;
+}
+
+.breed-basic-info span{
+    text-align: center;
 }
 
 #breed-info {
@@ -438,12 +443,12 @@ a {
 }
 
 .breed-info-list-item div span {
-    font-size: 2em;
+    font-size: 2.5em;
     line-height: 2em;
 }
 
 .breed-info-list-item div p {
-    font-size: 1.5em;
+    font-size: 2em;
     line-height: 1.5em;
 }
 
@@ -606,7 +611,6 @@ a {
         font-size: 4em;
         height: .9em;
         cursor: pointer;
-        filter: drop-shadow(5px 5px 3px #666666);
     }
 
     .close-menu {
@@ -757,6 +761,39 @@ a {
     .closeBtn{
         font-size: 50px;
     }
+
+    /*Breed*/
+
+    #breed-top{
+        flex-direction: column;
+    }
+
+    .breed-top-img {
+        width: 100%;
+    }
+    
+    .breed-top-img img {
+        object-fit: contain;
+        height: 100%;
+    }
+
+    .breed-top-text{
+        width: 100%;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    .breed-info-list{
+        column-count: 2;
+    }
+
+    .dog-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dog img{
+        width: 30em;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -870,6 +907,58 @@ a {
 
     #footer {
         font-size: 1em;
+    }
+
+    /*Breed*/
+
+    .breed-top-img{
+        width: 100%;
+    }
+
+    .breed-top-img img{
+        object-fit: contain;
+        height: 100%;
+    }
+
+    .breed-name{
+        font-size: 4em;
+        text-align: center;
+    }
+
+    .breed-basic-info{
+        font-size: 2.5em;
+    }
+
+    .breed-info-list{
+        column-count: 1;
+    }
+
+    .breed-info-list-item div img {
+        width: 2.5em;
+        margin-right: 1.5em;
+    }
+    
+    .breed-info-list-item div span {
+        font-size: 2em;
+        line-height: 2em;
+    }
+    
+    .breed-info-list-item div p {
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+
+    .dog-list{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #dogs h2 {
+        font-size: 3em;
+        margin-bottom: 1em;
+    }
+
+    .dog span {
+        font-size: 2.5em;
     }
 
 
