@@ -517,17 +517,17 @@ a {
 }
 
 .dog-name {
-    font-size: 70px;
+    font-size: 7em;
     margin-bottom: .5em;
 }
 
 .by-judges-title {
-    font-size: 50px;
+    font-size: 5em;
     margin-bottom: .5em;
 }
 
 .by-judges {
-    font-size: 35px;
+    font-size: 3.5em;
     line-height: 1.5em;
 }
 
@@ -577,6 +577,23 @@ a {
 
     .gallery {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    /*Dog*/
+
+    .dog-name {
+        font-size: 5em;
+        margin-bottom: .5em;
+    }
+
+    .by-judges-title {
+        font-size: 3.5em;
+        margin-bottom: .5em;
+    }
+    
+    .by-judges {
+        font-size: 2.5em;
+        line-height: 1.5em;
     }
 
 }
@@ -794,6 +811,44 @@ a {
     .dog img{
         width: 30em;
     }
+
+    /*Dog*/
+
+    #about-dog {
+        margin-top: 12vh;
+        margin-bottom: 3em;
+    }
+    
+    .about-dog{
+        flex-direction: column;
+    }
+
+    .about-dog-img {
+        width: 100%;
+    }
+    
+    .about-dog-img img {
+        margin-bottom: 2em;
+    }
+    
+    .about-dog-text {
+        width: 100%;
+    }
+    
+    .dog-name {
+        font-size: 5em;
+        margin-bottom: .5em;
+    }
+
+    .by-judges-title {
+        font-size: 3.5em;
+        margin-bottom: .5em;
+    }
+    
+    .by-judges {
+        font-size: 2.5em;
+        line-height: 1.5em;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -961,5 +1016,34 @@ a {
         font-size: 2.5em;
     }
 
+    /*Dog*/
 
+    .about-dog-img {
+        width: 100%;
+    }
+    
+    .about-dog-img img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .about-dog-text {
+        text-align: center;
+    }
+    
+    .dog-name {
+        font-size: 3em;
+        margin-bottom: .5em;
+    }
+
+    .by-judges-title {
+        font-size: 2.5em;
+        margin-bottom: .5em;
+    }
+    
+    .by-judges {
+        font-size: 2em;
+        line-height: 1.5em;
+    }
 }
