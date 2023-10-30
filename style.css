@@ -21,6 +21,8 @@ section {
 }
 
 body {
+    padding: 0;
+    margin: 0;
     background-color: #fefdf2;
 }
 
@@ -53,15 +55,17 @@ a {
     position: relative;
     display: flex;
     width: 55%;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
+    padding-right: .5em;
 }
 
 .menu-link {
     text-decoration: none;
     font-size: 20px;
     position: relative;
-    padding: .2em;
+    padding: .5em;
+    padding-bottom: .2em;
     color: black;
 }
 
@@ -79,6 +83,11 @@ a {
 
 .menu-link:hover::after {
     width: 100%;
+}
+
+.lang-icon{
+    width:2em;
+    margin-left: 1em;
 }
 
 
@@ -102,11 +111,11 @@ a {
     width: 100vw;
     height: 100vh;
     display: flex;
-    animation: slide 20s infinite;
+    overflow-y: hidden;
 }
 
 .slide img {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -182,10 +191,8 @@ a {
 }
 
 .more-link {
-    padding-left: 8px;
-    padding-right: 8px;
     position: relative;
-    padding: .2em;
+    padding-bottom: .2em;
 }
 
 .more-link::after {
@@ -224,7 +231,8 @@ a {
 }
 
 .contact-data span {
-    padding: 0.2em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
 }
 
 .sm-icon {
@@ -235,8 +243,7 @@ a {
 
 #footer {
     display: flex;
-    position: absolute;
-    bottom: 10;
+    bottom: 0;
     width: 100%;
     height: 1.5em;
     background-color: black;
@@ -244,6 +251,7 @@ a {
     align-items: center;
     justify-content: center;
     font-size: 120%;
+    padding: 0;
 }
 
 /*About page*/
@@ -414,7 +422,7 @@ a {
     flex-direction: column;
     align-items: center;
     font-size: 3em;
-    line-height: 1em;
+    line-height: 2em;
 }
 
 .breed-basic-info span{
@@ -488,24 +496,23 @@ a {
 
 /*About dog*/
 
-#about-dog {
-    margin-top: 12vh;
-    margin-bottom: 3em;
-}
-
 .about-dog {
     display: flex;
     width: 100%;
+    margin-top: 12vh;
 }
 
 .about-dog-img {
     display: flex;
-    justify-content: center;
     width: 50%;
+    justify-content: center;
 }
 
 .about-dog-img img {
+    object-fit: cover;
     border-radius: 15px;
+    width: 90%;
+    height: 50em;
 }
 
 .about-dog-text {
@@ -529,6 +536,7 @@ a {
 .by-judges {
     font-size: 3.5em;
     line-height: 1.5em;
+    text-align: center;
 }
 
 /*Media queries*/
@@ -638,6 +646,9 @@ a {
     }
 
     .menu-link{
+        display: flex;
+        width: 100%;
+        text-align: right;
         font-size: 3.5em;
     }
 
