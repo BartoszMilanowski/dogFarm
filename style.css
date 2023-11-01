@@ -67,6 +67,7 @@ a {
     padding: .5em;
     padding-bottom: .2em;
     color: black;
+    white-space: nowrap;
 }
 
 .menu-link::after {
@@ -85,8 +86,8 @@ a {
     width: 100%;
 }
 
-.lang-icon{
-    width:2em;
+.lang-icon {
+    width: 2em;
     margin-left: 1em;
 }
 
@@ -425,7 +426,7 @@ a {
     line-height: 2em;
 }
 
-.breed-basic-info span{
+.breed-basic-info span {
     text-align: center;
 }
 
@@ -541,6 +542,16 @@ a {
 
 /*Media queries*/
 
+@media only screen and (max-width: 1750px){
+
+
+    /*Gallery*/
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media only screen and (max-width: 1400px) {
 
     /*Navbar*/
@@ -581,11 +592,6 @@ a {
         height: 1.5em;
     }
 
-    /*Gallery*/
-
-    .gallery {
-        grid-template-columns: repeat(3, 1fr);
-    }
 
     /*Dog*/
 
@@ -598,7 +604,7 @@ a {
         font-size: 3.5em;
         margin-bottom: .5em;
     }
-    
+
     .by-judges {
         font-size: 2.5em;
         line-height: 1.5em;
@@ -645,14 +651,14 @@ a {
         cursor: pointer;
     }
 
-    .menu-link{
+    .menu-link {
         display: flex;
         width: 100%;
         text-align: right;
         font-size: 3.5em;
     }
 
-    .menu-link::after{
+    .menu-link::after {
         display: none;
     }
 
@@ -713,7 +719,7 @@ a {
         padding-right: 2.5em;
     }
 
-    .more-link::after{
+    .more-link::after {
         display: none;
     }
 
@@ -728,24 +734,24 @@ a {
 
     /*About page*/
 
-    #about-page{
+    #about-page {
         padding: 0;
     }
 
-    .about-page-first{
+    .about-page-first {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 0;
     }
 
-    .about-page-image{
+    .about-page-image {
         width: 100%;
         padding-left: 1em;
         padding-right: 1em;
     }
 
-    .about-page-text-first{
+    .about-page-text-first {
         width: 100%;
         font-size: 3em;
         padding-left: 1em;
@@ -760,7 +766,7 @@ a {
         margin-top: 1em;
         text-align: left;
     }
-    
+
     .about-page-content p {
         padding-top: .5em;
         padding-right: 1em;
@@ -786,40 +792,40 @@ a {
         object-fit: cover;
     }
 
-    .closeBtn{
+    .closeBtn {
         font-size: 50px;
     }
 
     /*Breed*/
 
-    #breed-top{
+    #breed-top {
         flex-direction: column;
     }
 
     .breed-top-img {
         width: 100%;
     }
-    
+
     .breed-top-img img {
         object-fit: contain;
         height: 100%;
     }
 
-    .breed-top-text{
+    .breed-top-text {
         width: 100%;
         margin-top: 1.5em;
         margin-bottom: 1.5em;
     }
 
-    .breed-info-list{
+    .breed-info-list {
         column-count: 2;
     }
 
-    .dog-list{
+    .dog-list {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .dog img{
+    .dog img {
         width: 30em;
     }
 
@@ -829,23 +835,23 @@ a {
         margin-top: 12vh;
         margin-bottom: 3em;
     }
-    
-    .about-dog{
+
+    .about-dog {
         flex-direction: column;
     }
 
     .about-dog-img {
         width: 100%;
     }
-    
+
     .about-dog-img img {
         margin-bottom: 2em;
     }
-    
+
     .about-dog-text {
         width: 100%;
     }
-    
+
     .dog-name {
         font-size: 5em;
         margin-bottom: .5em;
@@ -855,7 +861,7 @@ a {
         font-size: 3.5em;
         margin-bottom: .5em;
     }
-    
+
     .by-judges {
         font-size: 2.5em;
         line-height: 1.5em;
@@ -967,7 +973,7 @@ a {
         margin-left: .5em;
     }
 
-    .closeBtn{
+    .closeBtn {
         font-size: 40px;
     }
 
@@ -977,25 +983,25 @@ a {
 
     /*Breed*/
 
-    .breed-top-img{
+    .breed-top-img {
         width: 100%;
     }
 
-    .breed-top-img img{
+    .breed-top-img img {
         object-fit: contain;
         height: 100%;
     }
 
-    .breed-name{
+    .breed-name {
         font-size: 4em;
         text-align: center;
     }
 
-    .breed-basic-info{
+    .breed-basic-info {
         font-size: 2.5em;
     }
 
-    .breed-info-list{
+    .breed-info-list {
         column-count: 1;
     }
 
@@ -1003,18 +1009,18 @@ a {
         width: 2.5em;
         margin-right: 1.5em;
     }
-    
+
     .breed-info-list-item div span {
         font-size: 2em;
         line-height: 2em;
     }
-    
+
     .breed-info-list-item div p {
         font-size: 1.5em;
         line-height: 1.5em;
     }
 
-    .dog-list{
+    .dog-list {
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -1032,17 +1038,17 @@ a {
     .about-dog-img {
         width: 100%;
     }
-    
+
     .about-dog-img img {
         object-fit: contain;
         width: 100%;
         height: 100%;
     }
-    
+
     .about-dog-text {
         text-align: center;
     }
-    
+
     .dog-name {
         font-size: 3em;
         margin-bottom: .5em;
@@ -1052,7 +1058,7 @@ a {
         font-size: 2.5em;
         margin-bottom: .5em;
     }
-    
+
     .by-judges {
         font-size: 2em;
         line-height: 1.5em;
