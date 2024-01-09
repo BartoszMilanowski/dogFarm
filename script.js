@@ -40,26 +40,48 @@ const modalGallery = () => {
 
         const prevBtn = document.createElement('i');
         prevBtn.setAttribute('class', 'fas fa-arrow-left prevBtn');
-        prevBtn.onclick = () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            newImage.src = images[currentIndex].src;
-        }
+        prevBtn.onclick = () => handlePrev(newImage);
 
         const nextBtn = document.createElement('i');
         nextBtn.setAttribute('class', 'fas fa-arrow-right nextBtn');
-        nextBtn.onclick = () => {
-            currentIndex = (currentIndex + 1) % images.length;
-            newImage.src = images[currentIndex].src;
-        }
+        nextBtn.onclick = () => handleNext(newImage);
 
         const closeBtn = document.createElement('i');
         closeBtn.setAttribute('class', 'fas fa-times closeBtn');
-        closeBtn.onclick = () => {
-            modal.remove();
-        }
+        closeBtn.onclick = () => handleEsc(modal);
+
+        document.addEventListener('keydown', (event) => {
+            switch(event.key){
+                case 'ArrowLeft':
+                    handlePrev(newImage);
+                    break;
+                case 'ArrowRight':
+                    handleNext(newImage);
+                    break;
+                case 'Escape':
+                    handleEsc(modal);
+                    break;
+                default:
+                    break;
+            }
+        })
 
         modal.append(newImage, closeBtn, prevBtn, nextBtn);
     };
+
+    const handlePrev = (newImage) => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        newImage.src = images[currentIndex].src;
+    };
+
+    const handleNext = (newImage) => {
+        currentIndex = (currentIndex + 1) % images.length;
+        newImage.src = images[currentIndex].src;
+    };
+
+    const handleEsc = (modal) => {
+        modal.remove();
+    }
 }
 
 
